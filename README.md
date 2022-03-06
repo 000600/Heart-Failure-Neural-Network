@@ -3,7 +3,7 @@
 ## The Neural Network
 
 The network is densely connected and predicts the probability of one's heart failing based on 11 factors. These factors include:
-*Age
+-Age
 *Anaemia
 *Creatinine Phosphokinase
 *Diabetes
