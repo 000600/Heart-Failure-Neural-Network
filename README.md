@@ -2,7 +2,7 @@
 
 ## The Neural Network
 
-The network is densely connected and made in tensorflow that predicts the probability of one's heart failing based on 11 factors. These factors include:
+The network is densely connected and made in Tensorflow that predicts the probability of one's heart failing based on 11 factors. These factors include:
 - Age
 - Anaemia
 - Creatinine Phosphokinase
