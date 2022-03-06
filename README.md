@@ -11,4 +11,4 @@ The network is densely connected and predicts the probability of one's heart fai
 - Platelets
 
 ## The Dataset
-The dataset can be found at this link:https://www.kaggle.com/andrewmvd/heart-failure-clinical-data. Credit for the dataset collection goes to **Larxel** on *Kaggle*.
+The dataset can be found at this link: https://www.kaggle.com/andrewmvd/heart-failure-clinical-data. Credit for the dataset collection goes to **Larxel** on *Kaggle*.
