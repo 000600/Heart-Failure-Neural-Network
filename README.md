@@ -1,4 +1,4 @@
-# Heart Failure 
+# Heart Failure Neural Network
 
 ## The Neural Network
 
