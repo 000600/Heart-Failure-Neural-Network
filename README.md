@@ -10,5 +10,7 @@ The network is densely connected and made in Tensorflow that predicts the probab
 - Blood Pressure
 - Platelets
 
+Feel free to tune the hyperparameters or build upon the model!
+
 ## The Dataset
 The dataset can be found at this link: https://www.kaggle.com/andrewmvd/heart-failure-clinical-data. Credit for the dataset collection goes to **Larxel** on *Kaggle*.
