@@ -1,3 +1,4 @@
+# Imports
 import tensorflow as tf
 from tensorflow.keras.layers import Dense
 from tensorflow.keras.models import Sequential
@@ -9,7 +10,6 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
-from sklearn.datasets import load_iris
 from sklearn.model_selection import train_test_split
 
 # Get dataset
