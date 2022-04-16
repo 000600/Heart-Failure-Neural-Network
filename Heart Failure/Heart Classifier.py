@@ -34,8 +34,10 @@ for row in range(df.shape[0]):
   Y.append(df.iloc[row][-1])
 
 # Divide the X and Y values
-trainx, testx, trainy, testy = train_test_split(X, Y, random_state = 1)
+trainx, testx, trainy, testy = train_test_split(X, Y, random_state = 1) # Use trainx and trainy instead of X and Y below
 
+# Get input shape
+input_shape = len(X[0])
 # Create Adam optimizer
 opt = Adam(learning_rate = 0.001)
 
@@ -44,8 +46,9 @@ model = Sequential()
 
 # Add an initial batch norm layer so that all the values are in a reasonable range for the network to process
 model.add(tf.keras.layers.BatchNormalization())
-model.add(Dense(512, input_shape = [11]))
+model.add(Dense(512, input_shape = [input_shape])) # Input layer
 
+# Hidden layers
 model.add(Dense(256, activation = 'relu'))
 model.add(tf.keras.layers.BatchNormalization())
 
@@ -64,7 +67,7 @@ model.compile(optimizer = opt, loss = tf.keras.losses.SparseCategoricalCrossentr
 early_stopping = EarlyStopping(min_delta = 0.001, patience = 5, restore_best_weights = True)
 
 # Fit model and store training history
-history = model.fit(trainx, trainy, epochs = 100) # To add callbacks, add the following as a parameter: callbacks = [early_stopping]
+history = model.fit(X, Y, epochs = 100) # To add callbacks, add the following as a parameter: callbacks = [early_stopping]
 history_df = pd.DataFrame(history.history)
 
 # View the model's loss
@@ -76,5 +79,5 @@ print(np.argmax(model.predict([testx[0]])))
 print(testy[0])
 
 # Evaluate the model
-test_loss, test_acc = model.evaluate(np.array(testx), np.array(testy), verbose=2)
+test_loss, test_acc = model.evaluate(np.array(testx), np.array(testy), verbose = 0) # Change verbose to 1 or 2 for more information
 print('Test accuracy:', test_acc)
