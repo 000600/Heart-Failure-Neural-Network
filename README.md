@@ -7,7 +7,7 @@ The network is densely connected and made in Tensorflow that predicts the probab
 - Anaemia
 - Creatinine Phosphokinase
 - Diabetes
-- Blood_pressure
+- Blood Pressure
 - Platelets
 
 ## The Dataset
