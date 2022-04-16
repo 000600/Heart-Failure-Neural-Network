@@ -15,8 +15,8 @@ The dataset can be found at this link: https://www.kaggle.com/andrewmvd/heart-fa
 - Blood Pressure
 - Platelets
 
-## Packages
-This neural network was created with the help of the Tensorflow and Scikit-Learn packages.
+## Libraries
+This neural network was created with the help of the Tensorflow and Scikit-Learn libraries.
 - Tensorflow's Website: https://www.tensorflow.org/
 - Tensorflow Installation Instructions: https://www.tensorflow.org/install
 - Scikit Learn's Website: https://scikit-learn.org/stable/
