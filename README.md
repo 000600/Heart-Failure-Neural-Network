@@ -2,7 +2,9 @@
 
 ## The Neural Network
 
-The network is densely connected and  predicts the probability of one's heart failing. Since the dataset is categorical (the model predicts either 0 or 1 for a death event), the model uses a sparse categorical crossentropy loss function and has 2 output neurons. The model uses a standard Adam optimizer with a learning rate of 0.001. The model's architecture contains:
+This network predicts the probability of one's heart failing based on clinical heart records. The network is fully densely connected and, since the dataset is 
+categorical (the model predicts either 0 or 1 for a death event), the model uses a sparse categorical crossentropy loss function and has 2 output neurons. The model 
+uses a standard Adam optimizer with a learning rate of 0.001. The model's architecture contains:
 - 1 Batch Normalization Layer
 - 1 Input Layer (with 512 input neurons)
 - 3 Hidden Layers (2 with 256 neurons and 1 with 512; each with a ReLU activation function)
