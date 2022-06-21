@@ -11,7 +11,7 @@ import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
 
 # Get dataset
-data = pd.read_csv('HFCR.csv')
+data = pd.read_csv('Heart Failure Clinical Records.csv')
 df = pd.DataFrame(data)
 
 # Remove the 'DEATH_EVENT' value from the dataset for prediction
@@ -36,6 +36,7 @@ trainx, testx, trainy, testy = train_test_split(X, Y, random_state = 1) # Use tr
 
 # Get input shape
 input_shape = len(X[0])
+
 # Create Adam optimizer
 opt = Adam(learning_rate = 0.001)
 
