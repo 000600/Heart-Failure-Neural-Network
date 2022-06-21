@@ -64,7 +64,7 @@ model.compile(optimizer = opt, loss = 'binary_crossentropy', metrics = ['binary_
 early_stopping = EarlyStopping(min_delta = 0.001, patience = 5, restore_best_weights = True)
 
 # Fit model and store training history
-history = model.fit(X, Y, epochs = 100) # To add callbacks, add the following as a parameter: callbacks = [early_stopping]
+history = model.fit(trainx, trainy, epochs = 100) # To add callbacks, add the following as a parameter: callbacks = [early_stopping]
 history_df = pd.DataFrame(history.history)
 
 # View the model's loss
