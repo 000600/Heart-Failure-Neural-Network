@@ -72,9 +72,11 @@ history_df = pd.DataFrame(history.history)
 history_df.head()
 history_df.loc[0:, 'loss'].plot()
 
-# Prediction vs. actual value (change the index to view a different input and output set
-print(np.argmax(model.predict([testx[0]])))
-print(testy[0])
+# Prediction vs. actual value (change the index to view a different input and output set)
+index = 0
+prediction = np.argmax(model.predict([testx[index]]))
+print(f"Model's Prediction on a Sample Input: {prediction}")
+print(f"Actual Label on the Same Input: {testy[index]}")
 
 # Evaluate the model
 test_loss, test_acc = model.evaluate(np.array(testx), np.array(testy), verbose = 0) # Change verbose to 1 or 2 for more information
