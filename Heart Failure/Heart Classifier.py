@@ -11,7 +11,7 @@ import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
 
 # Get dataset
-data = pd.read_csv('Heart Failure Clinical Records.csv')
+data = pd.read_csv('HFCR.csv')
 df = pd.DataFrame(data)
 
 # Remove the 'DEATH_EVENT' value from the dataset for prediction
@@ -57,11 +57,10 @@ model.add(Dense(256, activation = 'relu'))
 model.add(tf.keras.layers.BatchNormalization())
 
 # Output layer
-model.add(Dense(2))
-model.add(Softmax())
+model.add(Dense(1, activation = 'sigmoid'))
 
 # Compile model
-model.compile(optimizer = opt, loss = tf.keras.losses.SparseCategoricalCrossentropy(from_logits = True), metrics=['accuracy'])
+model.compile(optimizer = opt, loss = 'binary_crossentropy', metrics = ['binary_accuracy'])
 early_stopping = EarlyStopping(min_delta = 0.001, patience = 5, restore_best_weights = True)
 
 # Fit model and store training history
@@ -75,9 +74,9 @@ history_df.loc[0:, 'loss'].plot()
 # Prediction vs. actual value (change the index to view a different input and output set)
 index = 0
 prediction = np.argmax(model.predict([testx[index]]))
-print(f"Model's Prediction on a Sample Input: {prediction}")
+print(f"\nModel's Prediction on a Sample Input: {prediction}")
 print(f"Actual Label on the Same Input: {testy[index]}")
 
 # Evaluate the model
 test_loss, test_acc = model.evaluate(np.array(testx), np.array(testy), verbose = 0) # Change verbose to 1 or 2 for more information
-print('Test accuracy:', test_acc)
+print('\nTest accuracy:', test_acc)
