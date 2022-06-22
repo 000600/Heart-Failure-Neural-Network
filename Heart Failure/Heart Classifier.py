@@ -3,6 +3,9 @@ import tensorflow as tf
 from tensorflow.keras.layers import Dense
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.callbacks import EarlyStopping
+from tensorflow.keras.layers import Softmax
+from tensorflow.keras.layers import Dropout
+from tensorflow.keras.layers import BatchNormalization
 from tensorflow.keras.optimizers import Adam
 import numpy as np
 import pandas as pd
@@ -61,10 +64,10 @@ model.add(Dense(1, activation = 'sigmoid'))
 
 # Compile model
 model.compile(optimizer = opt, loss = 'binary_crossentropy', metrics = ['binary_accuracy'])
-early_stopping = EarlyStopping(min_delta = 0.001, patience = 5, restore_best_weights = True)
+early_stopping = EarlyStopping(min_delta = 0.001, patience = 100, restore_best_weights = True)
 
 # Fit model and store training history
-history = model.fit(trainx, trainy, validation_data = (testx, testy), batch_size = 512, epochs = 100, callbacks = [early_stopping])
+history = model.fit(trainx, trainy, validation_data = (testx, testy), batch_size = 512, epochs = 700, callbacks = [early_stopping])
 history_df = pd.DataFrame(history.history)
 
 # Plot loss and validation loss
