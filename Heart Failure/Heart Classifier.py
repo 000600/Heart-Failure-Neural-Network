@@ -79,4 +79,4 @@ print(f"Actual Label on the Same Input: {testy[index]}")
 
 # Evaluate the model
 test_loss, test_acc = model.evaluate(np.array(testx), np.array(testy), verbose = 0) # Change verbose to 1 or 2 for more information
-print(f'\nTest accuracy:{test_acc * 100}%')
+print(f'\nTest accuracy: {test_acc * 100}%')
