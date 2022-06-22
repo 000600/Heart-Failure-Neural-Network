@@ -75,7 +75,7 @@ history_df.loc[0:, 'loss'].plot()
 # Prediction vs. actual value (change the index to view a different input and output set)
 index = 0
 prediction = np.argmax(model.predict([testx[index]]))
-print(f"\nModel's Prediction on a Sample Input: {prediction}")
+print(f"\nModel's Prediction on a Sample Input: {prediction}") # 0 if the the model predicts the patient will die, 1 if the the model predicts the patient will live
 print(f"Actual Label on the Same Input: {testy[index]}")
 
 # Evaluate the model
