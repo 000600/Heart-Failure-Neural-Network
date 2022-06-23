@@ -46,18 +46,18 @@ opt = Adam(learning_rate = 0.001)
 model = Sequential()
 
 # Add an initial batch norm layer so that all the values are in a reasonable range for the network to process
-model.add(tf.keras.layers.BatchNormalization())
+model.add(BatchNormalization())
 model.add(Dense(512, input_shape = [input_shape])) # Input layer
 
 # Hidden layers
 model.add(Dense(256, activation = 'relu'))
-model.add(tf.keras.layers.BatchNormalization())
+model.add(BatchNormalization())
 
 model.add(Dense(512, activation = 'relu'))
-model.add(tf.keras.layers.BatchNormalization())
+model.add(BatchNormalization())
 
 model.add(Dense(256, activation = 'relu'))
-model.add(tf.keras.layers.BatchNormalization())
+model.add(BatchNormalization())
 
 # Output layer
 model.add(Dense(1, activation = 'sigmoid'))
