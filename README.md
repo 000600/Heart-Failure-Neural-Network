@@ -24,8 +24,10 @@ The dataset can be found at this link: https://www.kaggle.com/andrewmvd/heart-fa
 Although the raw data includes some bias (it is more representative of survival scenarios than death scenarios), this is solved in the model through SMOTE, which will oversample the death scenario in order to provide more equal data representation.
 
 ## Libraries
-This neural network was created with the help of the Tensorflow and Scikit-Learn libraries.
+This neural network was created with the help of the Tensorflow, Imbalanced-Learn, and Scikit-Learn libraries.
 - Tensorflow's Website: https://www.tensorflow.org/
 - Tensorflow Installation Instructions: https://www.tensorflow.org/install
-- Scikit Learn's Website: https://scikit-learn.org/stable/
-- Scikit Learn's Installation Instructions: https://scikit-learn.org/stable/install.html
+- Scikit-Learn's Website: https://scikit-learn.org/stable/
+- Scikit-Learn's Installation Instructions: https://scikit-learn.org/stable/install.html
+- Imbalanced-Learn's Website: https://imbalanced-learn.org/stable/about.html
+- Imbalanced-Learn's Installation Instructions: https://pypi.org/project/imbalanced-learn/
