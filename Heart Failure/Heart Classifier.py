@@ -11,6 +11,7 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
+from imblearn.over_sampling import SMOTE
 
 # Get dataset
 data = pd.read_csv('Heart Failure Clinical Records.csv')
@@ -32,6 +33,10 @@ for row in range(df2.shape[0]):
 
 for row in range(df.shape[0]):
   Y.append(df.iloc[row][-1])
+
+# Balance dataset (make sure there are an even representation of instances with label 1 and label 0)
+smote = SMOTE()
+X, Y = smote.fit_resample(X, Y)
 
 # Divide the X and Y values
 trainx, testx, trainy, testy = train_test_split(X, Y, random_state = 1) # Use trainx and trainy instead of X and Y below
