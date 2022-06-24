@@ -21,6 +21,8 @@ The dataset can be found at this link: https://www.kaggle.com/andrewmvd/heart-fa
 - Blood Pressure
 - Platelets
 
+Although the raw data includes some bias (it is more representative of survival scenarios than death scenarios), this is solved in the model through SMOTE, which will oversample the death scenario in order to provide more equal data representation.
+
 ## Libraries
 This neural network was created with the help of the Tensorflow and Scikit-Learn libraries.
 - Tensorflow's Website: https://www.tensorflow.org/
