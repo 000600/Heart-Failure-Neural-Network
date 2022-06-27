@@ -14,7 +14,7 @@ from sklearn.model_selection import train_test_split
 from imblearn.over_sampling import SMOTE
 
 # Get dataset
-data = pd.read_csv('Heart Failure Clinical Records.csv')
+data = pd.read_csv('heart_failure_records.csv')
 df = pd.DataFrame(data)
 
 # Remove the 'DEATH_EVENT' value from the dataset for prediction
