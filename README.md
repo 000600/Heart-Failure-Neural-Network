@@ -31,3 +31,6 @@ This neural network was created with the help of the Tensorflow, Imbalanced-Lear
 - Scikit-Learn's Installation Instructions: https://scikit-learn.org/stable/install.html
 - Imbalanced-Learn's Website: https://imbalanced-learn.org/stable/about.html
 - Imbalanced-Learn's Installation Instructions: https://pypi.org/project/imbalanced-learn/
+
+## Disclaimer
+Please note that I do not recommend, endorse, or encourage the use of any of my work here in actual medcial use or application in any way. 
