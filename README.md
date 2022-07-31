@@ -33,4 +33,4 @@ This neural network was created with the help of the Tensorflow, Imbalanced-Lear
 - Imbalanced-Learn's Installation Instructions: https://pypi.org/project/imbalanced-learn/
 
 ## Disclaimer
-Please note that I do not recommend, endorse, or encourage the use of any of my work here in actual medcial use or application in any way. 
+Please note that I do not recommend, endorse, or encourage the use of any of my work here in actual medical use or application in any way. 
