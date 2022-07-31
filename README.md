@@ -13,9 +13,9 @@ This network predicts whether or not a patient will die as a result of heart fai
 Feel free to further tune the hyperparameters or build upon the model!
 
 ## The Dataset
-The dataset can be found at this link: https://www.kaggle.com/andrewmvd/heart-failure-clinical-data. Credit for the dataset collection goes to **Nayan Sakhiya**, **Durgance Gaur**, **Sanchita Karmakar**, and others on *Kaggle*. It describes the death event (0 or 1) of a patient based on 11 factors, inluding:
+The dataset can be found at this link: https://www.kaggle.com/andrewmvd/heart-failure-clinical-data. Credit for the dataset collection goes to **Nayan Sakhiya**, **Durgance Gaur**, **Sanchita Karmakar**, and others on *Kaggle*. It describes the death event (0 or 1) of a patient based on 11 factors, including:
 - Age
-- Anaemia
+- Anemia
 - Creatinine Phosphokinase
 - Diabetes
 - Blood Pressure
