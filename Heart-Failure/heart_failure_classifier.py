@@ -83,7 +83,7 @@ history_df.loc[0:, ['binary_accuracy', 'val_binary_accuracy']].plot()
 
 # Prediction vs. actual value (change the index to view a different input and output set)
 index = 0
-prediction = np.argmax(model.predict([testx[index]]))
+prediction = 1 if model.predict([x_test[index]]) > 0.5 else 0
 print(f"\nModel's Prediction on a Sample Input: {prediction}") # 0 if the the model predicts the patient will die, 1 if the the model predicts the patient will live
 print(f"Actual Label on the Same Input: {testy[index]}")
 
